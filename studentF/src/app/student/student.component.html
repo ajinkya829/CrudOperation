@@ -1,0 +1,32 @@
+<p>student works!</p>
+<br>
+
+<table border="1" align="center">
+        <tr>
+         <th>Student no</th>
+         <th>Student name</th>
+         <th>Student age</th>
+         <th>Update</th>
+         <th>Delete</th>
+        </tr>
+        <tr *ngFor="let stud of students">
+                <td>{{stud.sno}}</td>
+                <td>{{stud.sname}}</td>
+                <td>{{stud.age}}</td>
+                <td><button (click)="update(stud.sno)">Update</button></td>
+                <td><button (click)="delete(stud.sno)">Delete</button></td>
+        </tr>
+    </table>
+    <br>
+    
+    Student no:
+    <input type="text" [(ngModel)]="studObj.sno"><br>
+    Student name:
+    <input type="text" [(ngModel)]="studObj.sname"><br>
+    Student age:
+    <input type="text" [(ngModel)]="studObj.age"><br>
+<br>
+    <button (click)="insert()">Save</button>
+    
+<button (click)="edit()">Edit</button>
+    
